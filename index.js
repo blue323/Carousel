@@ -32,5 +32,13 @@ function moveToNextSlide() {
 }
 
 function moveToPrevSlide() {
-    
+    if(slidePosition === 0) {
+        slides[slidePosition].classList.remove("carousel-item-visible")
+        slidePosition = totalSlides-1
+        slides[slidePosition].classList.add("carousel-item-visible")
+    } else {
+        slides[slidePosition].classList.remove("carousel-item-visible")
+        slidePosition-- 
+        slides[slidePosition].classList.add("carousel-item-visible")
+    }
 }
