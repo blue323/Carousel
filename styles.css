@@ -33,6 +33,7 @@ body {
 
 .carousel .carousel-item-visible {
     display: block;
+    animation: fadeVisibility 0.5s;
 }
 
 .carousel .carousel-item img {
@@ -61,10 +62,27 @@ body {
     height: 40px;
 }
 
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    color: orangered;
+}
+
 .carousel .carousel-actions button#carousel-button-prev {
     margin-left: 20px;
 }
 
 .carousel .carousel-actions button#carousel-button-next {
     margin-right: 20px;   
+}
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
